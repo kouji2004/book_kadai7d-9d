@@ -5956,3 +5956,756 @@ Processing by BooksController#show as HTML
 Completed 200 OK in 55ms (Views: 39.1ms | ActiveRecord: 1.7ms | Allocations: 28608)
 
 
+Started GET "/chats/2" for 153.196.161.98 at 2022-06-05 04:28:05 +0000
+Cannot render console from 153.196.161.98! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (5.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/chats/2"):
+  
+Started GET "/" for 153.196.161.98 at 2022-06-05 04:28:08 +0000
+Cannot render console from 153.196.161.98! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (Duration: 1.1ms | Allocations: 267)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 3.9ms | Allocations: 793)
+  Rendered searches/_form.html.erb (Duration: 1.0ms | Allocations: 294)
+  Rendered layouts/_footer.html.erb (Duration: 1.1ms | Allocations: 139)
+  Rendered layout layouts/application.html.erb (Duration: 30.6ms | Allocations: 4178)
+Completed 200 OK in 50ms (Views: 31.8ms | ActiveRecord: 0.0ms | Allocations: 9826)
+
+
+Started GET "/" for 153.196.161.98 at 2022-06-05 04:28:08 +0000
+Cannot render console from 153.196.161.98! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (Duration: 0.3ms | Allocations: 94)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 219)
+  Rendered searches/_form.html.erb (Duration: 0.1ms | Allocations: 59)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | Allocations: 2360)
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.0ms | Allocations: 5407)
+
+
+Started GET "/users/sign_in" for 153.196.161.98 at 2022-06-05 04:28:10 +0000
+Cannot render console from 153.196.161.98! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.5ms | Allocations: 651)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 36.1ms | Allocations: 5890)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 196)
+  Rendered searches/_form.html.erb (Duration: 0.1ms | Allocations: 59)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered layout layouts/application.html.erb (Duration: 39.6ms | Allocations: 8167)
+Completed 200 OK in 50ms (Views: 41.1ms | ActiveRecord: 0.5ms | Allocations: 15787)
+
+
+Started POST "/users/sign_in" for 153.196.161.98 at 2022-06-05 04:28:15 +0000
+Cannot render console from 153.196.161.98! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"新規太郎", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["name", "新規太郎"], ["LIMIT", 1]]
+Redirected to https://e0848cadddc14f6ca2fe73eadd0474d5.vfs.cloud9.us-east-1.amazonaws.com/users/1
+Completed 302 Found in 260ms (ActiveRecord: 3.1ms | Allocations: 4665)
+
+
+Started GET "/users/1" for 153.196.161.98 at 2022-06-05 04:28:15 +0000
+Cannot render console from 153.196.161.98! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (1.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "User"], ["name", "profile_image"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28:in `get_profile_image'
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ?[0m  [["follower_id", 1]]
+  ↳ app/views/users/_info.html.erb:13
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = ?[0m  [["followed_id", 1]]
+  ↳ app/views/users/_info.html.erb:17
+  Rendered users/_info.html.erb (Duration: 78.5ms | Allocations: 15756)
+  Rendered books/_form.html.erb (Duration: 10.3ms | Allocations: 2963)
+  [1m[36mBook Load (0.8ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/books/_index.html.erb:11
+  [1m[36mFavorite Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "favorites" WHERE "favorites"."book_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["book_id", 1], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/book.rb:15:in `favorited_by?'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."book_id" = ?[0m  [["book_id", 1]]
+  ↳ app/views/favorites/_btn.html.erb:9
+  Rendered favorites/_btn.html.erb (Duration: 8.2ms | Allocations: 3662)
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "book_comments" WHERE "book_comments"."book_id" = ?[0m  [["book_id", 1]]
+  ↳ app/views/book_comments/_counter.html.erb:1
+  Rendered book_comments/_counter.html.erb (Duration: 5.8ms | Allocations: 2644)
+  Rendered books/_static_rate.html.erb (Duration: 1.4ms | Allocations: 986)
+  Rendered books/_index.html.erb (Duration: 22.8ms | Allocations: 10332)
+  Rendered users/show.html.erb within layouts/application (Duration: 114.1ms | Allocations: 29812)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 171)
+  Rendered searches/_form.html.erb (Duration: 2.1ms | Allocations: 1762)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered layout layouts/application.html.erb (Duration: 119.4ms | Allocations: 33671)
+Completed 200 OK in 159ms (Views: 115.2ms | ActiveRecord: 6.2ms | Allocations: 43988)
+
+
+Started GET "/books" for 153.196.161.98 at 2022-06-06 06:26:54 +0000
+Cannot render console from 153.196.161.98! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (3.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BooksController#index as HTML
+Completed 401 Unauthorized in 18ms (ActiveRecord: 0.0ms | Allocations: 4659)
+
+
+Started GET "/users/sign_in" for 153.196.161.98 at 2022-06-06 06:26:54 +0000
+Cannot render console from 153.196.161.98! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 2.9ms | Allocations: 657)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 20.9ms | Allocations: 2926)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 3.6ms | Allocations: 749)
+  Rendered searches/_form.html.erb (Duration: 1.9ms | Allocations: 295)
+  Rendered layouts/_footer.html.erb (Duration: 2.1ms | Allocations: 139)
+  Rendered layout layouts/application.html.erb (Duration: 58.0ms | Allocations: 6810)
+Completed 200 OK in 101ms (Views: 80.4ms | ActiveRecord: 0.4ms | Allocations: 15269)
+
+
+Started POST "/users/sign_in" for 153.196.161.98 at 2022-06-06 06:27:01 +0000
+Cannot render console from 153.196.161.98! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"新規太郎", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["name", "新規太郎"], ["LIMIT", 1]]
+Redirected to https://e0848cadddc14f6ca2fe73eadd0474d5.vfs.cloud9.us-east-1.amazonaws.com/users/1
+Completed 302 Found in 268ms (ActiveRecord: 0.7ms | Allocations: 4751)
+
+
+Started GET "/users/1" for 153.196.161.98 at 2022-06-06 06:27:01 +0000
+Cannot render console from 153.196.161.98! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "User"], ["name", "profile_image"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28:in `get_profile_image'
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ?[0m  [["follower_id", 1]]
+  ↳ app/views/users/_info.html.erb:13
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = ?[0m  [["followed_id", 1]]
+  ↳ app/views/users/_info.html.erb:17
+  Rendered users/_info.html.erb (Duration: 43.1ms | Allocations: 15743)
+  Rendered books/_form.html.erb (Duration: 7.9ms | Allocations: 2964)
+  [1m[36mBook Load (0.6ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/books/_index.html.erb:11
+  [1m[36mFavorite Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "favorites" WHERE "favorites"."book_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["book_id", 1], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/book.rb:15:in `favorited_by?'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."book_id" = ?[0m  [["book_id", 1]]
+  ↳ app/views/favorites/_btn.html.erb:9
+  Rendered favorites/_btn.html.erb (Duration: 8.3ms | Allocations: 3664)
+  [1m[35m (2.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "book_comments" WHERE "book_comments"."book_id" = ?[0m  [["book_id", 1]]
+  ↳ app/views/book_comments/_counter.html.erb:1
+  Rendered book_comments/_counter.html.erb (Duration: 7.9ms | Allocations: 2644)
+  Rendered books/_static_rate.html.erb (Duration: 1.4ms | Allocations: 986)
+  Rendered books/_index.html.erb (Duration: 25.0ms | Allocations: 10333)
+  Rendered users/show.html.erb within layouts/application (Duration: 78.3ms | Allocations: 29806)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 171)
+  Rendered searches/_form.html.erb (Duration: 1.8ms | Allocations: 1762)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered layout layouts/application.html.erb (Duration: 83.8ms | Allocations: 33666)
+Completed 200 OK in 113ms (Views: 77.0ms | ActiveRecord: 8.6ms | Allocations: 43946)
+
+
+Started GET "/users/1" for 153.196.161.98 at 2022-06-06 06:32:51 +0000
+Cannot render console from 153.196.161.98! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (1.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "User"], ["name", "profile_image"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28:in `get_profile_image'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ?[0m  [["follower_id", 1]]
+  ↳ app/views/users/_info.html.erb:13
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = ?[0m  [["followed_id", 1]]
+  ↳ app/views/users/_info.html.erb:17
+  Rendered users/_info.html.erb (Duration: 47.8ms | Allocations: 15801)
+  Rendered books/_form.html.erb (Duration: 9.1ms | Allocations: 5347)
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/books/_index.html.erb:11
+  [1m[36mFavorite Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "favorites" WHERE "favorites"."book_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["book_id", 1], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/book.rb:15:in `favorited_by?'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."book_id" = ?[0m  [["book_id", 1]]
+  ↳ app/views/favorites/_btn.html.erb:9
+  Rendered favorites/_btn.html.erb (Duration: 7.8ms | Allocations: 3661)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "book_comments" WHERE "book_comments"."book_id" = ?[0m  [["book_id", 1]]
+  ↳ app/views/book_comments/_counter.html.erb:1
+  Rendered book_comments/_counter.html.erb (Duration: 5.3ms | Allocations: 2644)
+  Rendered books/_static_rate.html.erb (Duration: 1.4ms | Allocations: 986)
+  Rendered books/_index.html.erb (Duration: 21.6ms | Allocations: 10379)
+  Rendered users/show.html.erb within layouts/application (Duration: 81.9ms | Allocations: 32414)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.9ms | Allocations: 720)
+  Rendered searches/_form.html.erb (Duration: 2.1ms | Allocations: 1999)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 139)
+  Rendered layout layouts/application.html.erb (Duration: 90.6ms | Allocations: 37862)
+Completed 200 OK in 158ms (Views: 92.2ms | ActiveRecord: 4.7ms | Allocations: 56839)
+
+
+Started POST "/books" for 153.196.161.98 at 2022-06-06 06:33:04 +0000
+Cannot render console from 153.196.161.98! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BooksController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"tst1", "body"=>"aa", "rate"=>""}, "commit"=>"Create Book"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/books_controller.rb:23:in `create'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:23:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/books_controller.rb:23:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  Rendered layouts/_errors.html.erb (Duration: 1.9ms | Allocations: 1171)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "User"], ["name", "profile_image"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28:in `get_profile_image'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ?[0m  [["follower_id", 1]]
+  ↳ app/views/users/_info.html.erb:13
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = ?[0m  [["followed_id", 1]]
+  ↳ app/views/users/_info.html.erb:17
+  Rendered users/_info.html.erb (Duration: 9.5ms | Allocations: 3686)
+  Rendered books/_form.html.erb (Duration: 4.7ms | Allocations: 2740)
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/_index.html.erb:11
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/books/_index.html.erb:13
+  [1m[36mCACHE ActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "User"], ["name", "profile_image"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28:in `get_profile_image'
+  [1m[36mFavorite Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "favorites" WHERE "favorites"."book_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["book_id", 1], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/book.rb:15:in `favorited_by?'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."book_id" = ?[0m  [["book_id", 1]]
+  ↳ app/views/favorites/_btn.html.erb:9
+  Rendered favorites/_btn.html.erb (Duration: 4.7ms | Allocations: 1830)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "book_comments" WHERE "book_comments"."book_id" = ?[0m  [["book_id", 1]]
+  ↳ app/views/book_comments/_counter.html.erb:1
+  Rendered book_comments/_counter.html.erb (Duration: 2.6ms | Allocations: 930)
+  Rendered books/_static_rate.html.erb (Duration: 0.9ms | Allocations: 744)
+  Rendered books/_index.html.erb (Duration: 16.2ms | Allocations: 6545)
+  Rendered books/index.html.erb within layouts/application (Duration: 34.5ms | Allocations: 14730)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 163)
+  Rendered searches/_form.html.erb (Duration: 1.3ms | Allocations: 1633)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered layout layouts/application.html.erb (Duration: 39.7ms | Allocations: 18476)
+Completed 200 OK in 63ms (Views: 40.1ms | ActiveRecord: 1.4ms | Allocations: 24414)
+
+
+Started POST "/books" for 153.196.161.98 at 2022-06-06 06:33:12 +0000
+Cannot render console from 153.196.161.98! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BooksController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"title"=>"tst1", "body"=>"aa", "rate"=>"2.5"}, "commit"=>"Create Book"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/books_controller.rb:23:in `create'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:23:in `create'
+  [1m[36mBook Create (1.9ms)[0m  [1m[32mINSERT INTO "books" ("rate", "title", "body", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["rate", 2.5], ["title", "tst1"], ["body", "aa"], ["user_id", 1], ["created_at", "2022-06-06 06:33:12.883499"], ["updated_at", "2022-06-06 06:33:12.883499"]]
+  ↳ app/controllers/books_controller.rb:23:in `create'
+  [1m[36mTRANSACTION (4.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/books_controller.rb:23:in `create'
+Redirected to https://e0848cadddc14f6ca2fe73eadd0474d5.vfs.cloud9.us-east-1.amazonaws.com/books/2
+Completed 302 Found in 21ms (ActiveRecord: 6.4ms | Allocations: 6893)
+
+
+Started GET "/books/2" for 153.196.161.98 at 2022-06-06 06:33:13 +0000
+Cannot render console from 153.196.161.98! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:6:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/books/show.html.erb:5
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "User"], ["name", "profile_image"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28:in `get_profile_image'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ?[0m  [["follower_id", 1]]
+  ↳ app/views/users/_info.html.erb:13
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = ?[0m  [["followed_id", 1]]
+  ↳ app/views/users/_info.html.erb:17
+  Rendered users/_info.html.erb (Duration: 11.1ms | Allocations: 3698)
+  Rendered books/_form.html.erb (Duration: 3.4ms | Allocations: 2156)
+  [1m[36mFavorite Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "favorites" WHERE "favorites"."book_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["book_id", 2], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/book.rb:15:in `favorited_by?'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."book_id" = ?[0m  [["book_id", 2]]
+  ↳ app/views/favorites/_btn.html.erb:9
+  Rendered favorites/_btn.html.erb (Duration: 4.7ms | Allocations: 1736)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "book_comments" WHERE "book_comments"."book_id" = ?[0m  [["book_id", 2]]
+  ↳ app/views/book_comments/_counter.html.erb:1
+  Rendered book_comments/_counter.html.erb (Duration: 2.5ms | Allocations: 884)
+  Rendered books/_static_rate.html.erb (Duration: 0.8ms | Allocations: 744)
+  [1m[36mBookComment Load (0.1ms)[0m  [1m[34mSELECT "book_comments".* FROM "book_comments" WHERE "book_comments"."book_id" = ?[0m  [["book_id", 2]]
+  ↳ app/views/book_comments/_index.html.erb:3
+  Rendered book_comments/_index.html.erb (Duration: 3.7ms | Allocations: 1203)
+  Rendered book_comments/_form.html.erb (Duration: 2.4ms | Allocations: 781)
+  Rendered books/show.html.erb within layouts/application (Duration: 37.9ms | Allocations: 13538)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 167)
+  Rendered searches/_form.html.erb (Duration: 1.0ms | Allocations: 1648)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered layout layouts/application.html.erb (Duration: 42.6ms | Allocations: 17377)
+Completed 200 OK in 52ms (Views: 42.1ms | ActiveRecord: 1.5ms | Allocations: 22493)
+
+
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateAs (20220606063356)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "as" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20220606063356"]]
+  [1m[36mTRANSACTION (8.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/books/2" for 153.196.161.98 at 2022-06-06 06:38:04 +0000
+Cannot render console from 153.196.161.98! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBook Load (0.8ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:6:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/books/show.html.erb:5
+  [1m[36mActiveStorage::Attachment Load (1.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "User"], ["name", "profile_image"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28:in `get_profile_image'
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ?[0m  [["follower_id", 1]]
+  ↳ app/views/users/_info.html.erb:13
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = ?[0m  [["followed_id", 1]]
+  ↳ app/views/users/_info.html.erb:17
+  Rendered users/_info.html.erb (Duration: 46.1ms | Allocations: 15950)
+  Rendered books/_form.html.erb (Duration: 24.2ms | Allocations: 5344)
+  [1m[36mFavorite Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "favorites" WHERE "favorites"."book_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["book_id", 2], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/book.rb:15:in `favorited_by?'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."book_id" = ?[0m  [["book_id", 2]]
+  ↳ app/views/favorites/_btn.html.erb:9
+  Rendered favorites/_btn.html.erb (Duration: 9.8ms | Allocations: 3500)
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "book_comments" WHERE "book_comments"."book_id" = ?[0m  [["book_id", 2]]
+  ↳ app/views/book_comments/_counter.html.erb:1
+  Rendered book_comments/_counter.html.erb (Duration: 4.5ms | Allocations: 1577)
+  Rendered books/_static_rate.html.erb (Duration: 1.6ms | Allocations: 986)
+  [1m[36mBookComment Load (0.1ms)[0m  [1m[34mSELECT "book_comments".* FROM "book_comments" WHERE "book_comments"."book_id" = ?[0m  [["book_id", 2]]
+  ↳ app/views/book_comments/_index.html.erb:3
+  Rendered book_comments/_index.html.erb (Duration: 3.5ms | Allocations: 1206)
+  Rendered book_comments/_form.html.erb (Duration: 2.9ms | Allocations: 780)
+  Rendered books/show.html.erb within layouts/application (Duration: 120.6ms | Allocations: 34438)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 1.6ms | Allocations: 720)
+  Rendered searches/_form.html.erb (Duration: 5.8ms | Allocations: 1997)
+  Rendered layouts/_footer.html.erb (Duration: 1.5ms | Allocations: 139)
+  Rendered layout layouts/application.html.erb (Duration: 149.1ms | Allocations: 39884)
+Completed 200 OK in 242ms (Views: 152.2ms | ActiveRecord: 10.5ms | Allocations: 60986)
+
+
+Started GET "/books/2" for 153.196.161.98 at 2022-06-06 06:43:31 +0000
+Cannot render console from 153.196.161.98! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:6:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/books/show.html.erb:5
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "User"], ["name", "profile_image"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28:in `get_profile_image'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ?[0m  [["follower_id", 1]]
+  ↳ app/views/users/_info.html.erb:13
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = ?[0m  [["followed_id", 1]]
+  ↳ app/views/users/_info.html.erb:17
+  Rendered users/_info.html.erb (Duration: 45.4ms | Allocations: 15953)
+  Rendered books/_form.html.erb (Duration: 7.3ms | Allocations: 5463)
+  [1m[36mFavorite Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "favorites" WHERE "favorites"."book_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["book_id", 2], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/book.rb:18:in `favorited_by?'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."book_id" = ?[0m  [["book_id", 2]]
+  ↳ app/views/favorites/_btn.html.erb:9
+  Rendered favorites/_btn.html.erb (Duration: 7.9ms | Allocations: 3506)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "book_comments" WHERE "book_comments"."book_id" = ?[0m  [["book_id", 2]]
+  ↳ app/views/book_comments/_counter.html.erb:1
+  Rendered book_comments/_counter.html.erb (Duration: 3.1ms | Allocations: 1577)
+  Rendered books/_static_rate.html.erb (Duration: 1.1ms | Allocations: 986)
+  [1m[36mBookComment Load (0.1ms)[0m  [1m[34mSELECT "book_comments".* FROM "book_comments" WHERE "book_comments"."book_id" = ?[0m  [["book_id", 2]]
+  ↳ app/views/book_comments/_index.html.erb:3
+  Rendered book_comments/_index.html.erb (Duration: 2.7ms | Allocations: 1206)
+  Rendered book_comments/_form.html.erb (Duration: 1.7ms | Allocations: 780)
+  Rendered books/show.html.erb within layouts/application (Duration: 83.1ms | Allocations: 34566)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 1.1ms | Allocations: 720)
+  Rendered searches/_form.html.erb (Duration: 1.4ms | Allocations: 1997)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 139)
+  Rendered layout layouts/application.html.erb (Duration: 90.9ms | Allocations: 40012)
+Completed 200 OK in 158ms (Views: 94.1ms | ActiveRecord: 3.0ms | Allocations: 61386)
+
+
+Started GET "/users" for 153.196.161.98 at 2022-06-06 06:43:36 +0000
+Cannot render console from 153.196.161.98! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "User"], ["name", "profile_image"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28:in `get_profile_image'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ?[0m  [["follower_id", 1]]
+  ↳ app/views/users/_info.html.erb:13
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = ?[0m  [["followed_id", 1]]
+  ↳ app/views/users/_info.html.erb:17
+  Rendered users/_info.html.erb (Duration: 17.9ms | Allocations: 3689)
+  Rendered books/_form.html.erb (Duration: 7.3ms | Allocations: 2139)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/_index.html.erb:10
+  [1m[36mCACHE ActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "User"], ["name", "profile_image"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28:in `get_profile_image'
+  Rendered relationships/_btn.html.erb (Duration: 0.9ms | Allocations: 218)
+  Rendered users/_index.html.erb (Duration: 11.6ms | Allocations: 2633)
+  Rendered users/index.html.erb within layouts/application (Duration: 40.1ms | Allocations: 8960)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 164)
+  Rendered searches/_form.html.erb (Duration: 3.4ms | Allocations: 1649)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered layout layouts/application.html.erb (Duration: 50.6ms | Allocations: 12798)
+Completed 200 OK in 63ms (Views: 52.8ms | ActiveRecord: 0.8ms | Allocations: 15032)
+
+
+Started GET "/users/1" for 153.196.161.98 at 2022-06-06 06:43:37 +0000
+Cannot render console from 153.196.161.98! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "User"], ["name", "profile_image"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28:in `get_profile_image'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ?[0m  [["follower_id", 1]]
+  ↳ app/views/users/_info.html.erb:13
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = ?[0m  [["followed_id", 1]]
+  ↳ app/views/users/_info.html.erb:17
+  Rendered users/_info.html.erb (Duration: 10.2ms | Allocations: 3700)
+  Rendered books/_form.html.erb (Duration: 3.4ms | Allocations: 2139)
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/books/_index.html.erb:11
+  [1m[36mFavorite Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "favorites" WHERE "favorites"."book_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["book_id", 1], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/book.rb:18:in `favorited_by?'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."book_id" = ?[0m  [["book_id", 1]]
+  ↳ app/views/favorites/_btn.html.erb:9
+  Rendered favorites/_btn.html.erb (Duration: 4.0ms | Allocations: 1831)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "book_comments" WHERE "book_comments"."book_id" = ?[0m  [["book_id", 1]]
+  ↳ app/views/book_comments/_counter.html.erb:1
+  Rendered book_comments/_counter.html.erb (Duration: 1.7ms | Allocations: 930)
+  Rendered books/_static_rate.html.erb (Duration: 0.9ms | Allocations: 744)
+  [1m[36mFavorite Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "favorites" WHERE "favorites"."book_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["book_id", 2], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/book.rb:18:in `favorited_by?'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."book_id" = ?[0m  [["book_id", 2]]
+  ↳ app/views/favorites/_btn.html.erb:9
+  Rendered favorites/_btn.html.erb (Duration: 4.9ms | Allocations: 1824)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "book_comments" WHERE "book_comments"."book_id" = ?[0m  [["book_id", 2]]
+  ↳ app/views/book_comments/_counter.html.erb:1
+  Rendered book_comments/_counter.html.erb (Duration: 2.4ms | Allocations: 929)
+  Rendered books/_static_rate.html.erb (Duration: 0.8ms | Allocations: 744)
+  Rendered books/_index.html.erb (Duration: 21.1ms | Allocations: 9445)
+  Rendered users/show.html.erb within layouts/application (Duration: 37.3ms | Allocations: 15788)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 164)
+  Rendered searches/_form.html.erb (Duration: 1.0ms | Allocations: 1649)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered layout layouts/application.html.erb (Duration: 42.3ms | Allocations: 19562)
+Completed 200 OK in 50ms (Views: 41.4ms | ActiveRecord: 1.8ms | Allocations: 22981)
+
+
+Started GET "/books" for 153.196.161.98 at 2022-06-06 06:43:39 +0000
+Cannot render console from 153.196.161.98! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BooksController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  Rendered layouts/_errors.html.erb (Duration: 1.2ms | Allocations: 229)
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "User"], ["name", "profile_image"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28:in `get_profile_image'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ?[0m  [["follower_id", 1]]
+  ↳ app/views/users/_info.html.erb:13
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = ?[0m  [["followed_id", 1]]
+  ↳ app/views/users/_info.html.erb:17
+  Rendered users/_info.html.erb (Duration: 10.5ms | Allocations: 3685)
+  Rendered books/_form.html.erb (Duration: 3.4ms | Allocations: 2137)
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/_index.html.erb:11
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/books/_index.html.erb:13
+  [1m[36mCACHE ActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "User"], ["name", "profile_image"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28:in `get_profile_image'
+  [1m[36mFavorite Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "favorites" WHERE "favorites"."book_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["book_id", 1], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/book.rb:18:in `favorited_by?'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."book_id" = ?[0m  [["book_id", 1]]
+  ↳ app/views/favorites/_btn.html.erb:9
+  Rendered favorites/_btn.html.erb (Duration: 4.9ms | Allocations: 1828)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "book_comments" WHERE "book_comments"."book_id" = ?[0m  [["book_id", 1]]
+  ↳ app/views/book_comments/_counter.html.erb:1
+  Rendered book_comments/_counter.html.erb (Duration: 2.3ms | Allocations: 930)
+  Rendered books/_static_rate.html.erb (Duration: 0.7ms | Allocations: 744)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/books/_index.html.erb:13
+  [1m[36mCACHE ActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "User"], ["name", "profile_image"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28:in `get_profile_image'
+  [1m[36mFavorite Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "favorites" WHERE "favorites"."book_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["book_id", 2], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/book.rb:18:in `favorited_by?'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."book_id" = ?[0m  [["book_id", 2]]
+  ↳ app/views/favorites/_btn.html.erb:9
+  Rendered favorites/_btn.html.erb (Duration: 4.9ms | Allocations: 1824)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "book_comments" WHERE "book_comments"."book_id" = ?[0m  [["book_id", 2]]
+  ↳ app/views/book_comments/_counter.html.erb:1
+  Rendered book_comments/_counter.html.erb (Duration: 2.6ms | Allocations: 929)
+  Rendered books/_static_rate.html.erb (Duration: 0.8ms | Allocations: 744)
+  Rendered books/_index.html.erb (Duration: 31.7ms | Allocations: 12390)
+  Rendered books/index.html.erb within layouts/application (Duration: 48.4ms | Allocations: 19242)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 163)
+  Rendered searches/_form.html.erb (Duration: 1.0ms | Allocations: 1648)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered layout layouts/application.html.erb (Duration: 52.8ms | Allocations: 23075)
+Completed 200 OK in 56ms (Views: 51.7ms | ActiveRecord: 1.7ms | Allocations: 24741)
+
+
+Started GET "/books?old=true" for 153.196.161.98 at 2022-06-06 06:43:41 +0000
+Cannot render console from 153.196.161.98! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BooksController#index as HTML
+  Parameters: {"old"=>"true"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  Rendered layouts/_errors.html.erb (Duration: 0.1ms | Allocations: 41)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "User"], ["name", "profile_image"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28:in `get_profile_image'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ?[0m  [["follower_id", 1]]
+  ↳ app/views/users/_info.html.erb:13
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = ?[0m  [["followed_id", 1]]
+  ↳ app/views/users/_info.html.erb:17
+  Rendered users/_info.html.erb (Duration: 9.9ms | Allocations: 3680)
+  Rendered books/_form.html.erb (Duration: 2.7ms | Allocations: 2132)
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."created_at" ASC[0m
+  ↳ app/views/books/_index.html.erb:11
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/books/_index.html.erb:13
+  [1m[36mCACHE ActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "User"], ["name", "profile_image"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28:in `get_profile_image'
+  [1m[36mFavorite Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "favorites" WHERE "favorites"."book_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["book_id", 1], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/book.rb:18:in `favorited_by?'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."book_id" = ?[0m  [["book_id", 1]]
+  ↳ app/views/favorites/_btn.html.erb:9
+  Rendered favorites/_btn.html.erb (Duration: 5.2ms | Allocations: 1828)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "book_comments" WHERE "book_comments"."book_id" = ?[0m  [["book_id", 1]]
+  ↳ app/views/book_comments/_counter.html.erb:1
+  Rendered book_comments/_counter.html.erb (Duration: 3.3ms | Allocations: 930)
+  Rendered books/_static_rate.html.erb (Duration: 1.1ms | Allocations: 744)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/books/_index.html.erb:13
+  [1m[36mCACHE ActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "User"], ["name", "profile_image"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28:in `get_profile_image'
+  [1m[36mFavorite Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "favorites" WHERE "favorites"."book_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["book_id", 2], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/book.rb:18:in `favorited_by?'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."book_id" = ?[0m  [["book_id", 2]]
+  ↳ app/views/favorites/_btn.html.erb:9
+  Rendered favorites/_btn.html.erb (Duration: 4.6ms | Allocations: 1824)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "book_comments" WHERE "book_comments"."book_id" = ?[0m  [["book_id", 2]]
+  ↳ app/views/book_comments/_counter.html.erb:1
+  Rendered book_comments/_counter.html.erb (Duration: 2.3ms | Allocations: 929)
+  Rendered books/_static_rate.html.erb (Duration: 0.8ms | Allocations: 744)
+  Rendered books/_index.html.erb (Duration: 30.9ms | Allocations: 12394)
+  Rendered books/index.html.erb within layouts/application (Duration: 44.5ms | Allocations: 18662)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 160)
+  Rendered searches/_form.html.erb (Duration: 1.0ms | Allocations: 1647)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered layout layouts/application.html.erb (Duration: 49.2ms | Allocations: 22490)
+Completed 200 OK in 55ms (Views: 48.3ms | ActiveRecord: 1.6ms | Allocations: 24721)
+
+
+Started GET "/books?latest=true" for 153.196.161.98 at 2022-06-06 06:43:43 +0000
+Cannot render console from 153.196.161.98! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BooksController#index as HTML
+  Parameters: {"latest"=>"true"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  Rendered layouts/_errors.html.erb (Duration: 0.1ms | Allocations: 41)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "User"], ["name", "profile_image"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28:in `get_profile_image'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ?[0m  [["follower_id", 1]]
+  ↳ app/views/users/_info.html.erb:13
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = ?[0m  [["followed_id", 1]]
+  ↳ app/views/users/_info.html.erb:17
+  Rendered users/_info.html.erb (Duration: 10.0ms | Allocations: 3680)
+  Rendered books/_form.html.erb (Duration: 3.4ms | Allocations: 2132)
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."created_at" DESC[0m
+  ↳ app/views/books/_index.html.erb:11
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/books/_index.html.erb:13
+  [1m[36mCACHE ActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "User"], ["name", "profile_image"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28:in `get_profile_image'
+  [1m[36mFavorite Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "favorites" WHERE "favorites"."book_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["book_id", 2], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/book.rb:18:in `favorited_by?'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."book_id" = ?[0m  [["book_id", 2]]
+  ↳ app/views/favorites/_btn.html.erb:9
+  Rendered favorites/_btn.html.erb (Duration: 6.9ms | Allocations: 1828)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "book_comments" WHERE "book_comments"."book_id" = ?[0m  [["book_id", 2]]
+  ↳ app/views/book_comments/_counter.html.erb:1
+  Rendered book_comments/_counter.html.erb (Duration: 2.3ms | Allocations: 930)
+  Rendered books/_static_rate.html.erb (Duration: 0.7ms | Allocations: 744)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/books/_index.html.erb:13
+  [1m[36mCACHE ActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "User"], ["name", "profile_image"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28:in `get_profile_image'
+  [1m[36mFavorite Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "favorites" WHERE "favorites"."book_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["book_id", 1], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/book.rb:18:in `favorited_by?'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."book_id" = ?[0m  [["book_id", 1]]
+  ↳ app/views/favorites/_btn.html.erb:9
+  Rendered favorites/_btn.html.erb (Duration: 4.7ms | Allocations: 1824)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "book_comments" WHERE "book_comments"."book_id" = ?[0m  [["book_id", 1]]
+  ↳ app/views/book_comments/_counter.html.erb:1
+  Rendered book_comments/_counter.html.erb (Duration: 2.5ms | Allocations: 929)
+  Rendered books/_static_rate.html.erb (Duration: 0.9ms | Allocations: 744)
+  Rendered books/_index.html.erb (Duration: 32.7ms | Allocations: 12397)
+  Rendered books/index.html.erb within layouts/application (Duration: 47.3ms | Allocations: 18665)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 160)
+  Rendered searches/_form.html.erb (Duration: 1.0ms | Allocations: 1647)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered layout layouts/application.html.erb (Duration: 51.9ms | Allocations: 22493)
+Completed 200 OK in 58ms (Views: 51.0ms | ActiveRecord: 1.6ms | Allocations: 24720)
+
+
+Started GET "/books?old=true" for 153.196.161.98 at 2022-06-06 06:43:44 +0000
+Cannot render console from 153.196.161.98! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BooksController#index as HTML
+  Parameters: {"old"=>"true"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  Rendered layouts/_errors.html.erb (Duration: 0.1ms | Allocations: 41)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "User"], ["name", "profile_image"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28:in `get_profile_image'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ?[0m  [["follower_id", 1]]
+  ↳ app/views/users/_info.html.erb:13
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = ?[0m  [["followed_id", 1]]
+  ↳ app/views/users/_info.html.erb:17
+  Rendered users/_info.html.erb (Duration: 8.6ms | Allocations: 3678)
+  Rendered books/_form.html.erb (Duration: 3.2ms | Allocations: 2132)
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."created_at" ASC[0m
+  ↳ app/views/books/_index.html.erb:11
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/books/_index.html.erb:13
+  [1m[36mCACHE ActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "User"], ["name", "profile_image"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28:in `get_profile_image'
+  [1m[36mFavorite Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "favorites" WHERE "favorites"."book_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["book_id", 1], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/book.rb:18:in `favorited_by?'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."book_id" = ?[0m  [["book_id", 1]]
+  ↳ app/views/favorites/_btn.html.erb:9
+  Rendered favorites/_btn.html.erb (Duration: 4.2ms | Allocations: 1828)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "book_comments" WHERE "book_comments"."book_id" = ?[0m  [["book_id", 1]]
+  ↳ app/views/book_comments/_counter.html.erb:1
+  Rendered book_comments/_counter.html.erb (Duration: 2.4ms | Allocations: 930)
+  Rendered books/_static_rate.html.erb (Duration: 1.8ms | Allocations: 1281)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/books/_index.html.erb:13
+  [1m[36mCACHE ActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "User"], ["name", "profile_image"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28:in `get_profile_image'
+  [1m[36mFavorite Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "favorites" WHERE "favorites"."book_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["book_id", 2], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/book.rb:18:in `favorited_by?'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."book_id" = ?[0m  [["book_id", 2]]
+  ↳ app/views/favorites/_btn.html.erb:9
+  Rendered favorites/_btn.html.erb (Duration: 4.6ms | Allocations: 1824)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "book_comments" WHERE "book_comments"."book_id" = ?[0m  [["book_id", 2]]
+  ↳ app/views/book_comments/_counter.html.erb:1
+  Rendered book_comments/_counter.html.erb (Duration: 2.3ms | Allocations: 929)
+  Rendered books/_static_rate.html.erb (Duration: 0.7ms | Allocations: 744)
+  Rendered books/_index.html.erb (Duration: 40.6ms | Allocations: 13037)
+  Rendered books/index.html.erb within layouts/application (Duration: 53.5ms | Allocations: 19303)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 160)
+  Rendered searches/_form.html.erb (Duration: 0.9ms | Allocations: 1648)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered layout layouts/application.html.erb (Duration: 58.1ms | Allocations: 23131)
+Completed 200 OK in 62ms (Views: 57.3ms | ActiveRecord: 1.3ms | Allocations: 24716)
+
+
+Started GET "/books?latest=true" for 153.196.161.98 at 2022-06-06 06:43:45 +0000
+Cannot render console from 153.196.161.98! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by BooksController#index as HTML
+  Parameters: {"latest"=>"true"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  Rendered layouts/_errors.html.erb (Duration: 0.1ms | Allocations: 41)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "User"], ["name", "profile_image"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28:in `get_profile_image'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."followed_id" WHERE "relationships"."follower_id" = ?[0m  [["follower_id", 1]]
+  ↳ app/views/users/_info.html.erb:13
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" INNER JOIN "relationships" ON "users"."id" = "relationships"."follower_id" WHERE "relationships"."followed_id" = ?[0m  [["followed_id", 1]]
+  ↳ app/views/users/_info.html.erb:17
+  Rendered users/_info.html.erb (Duration: 9.0ms | Allocations: 3678)
+  Rendered books/_form.html.erb (Duration: 3.4ms | Allocations: 2132)
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."created_at" DESC[0m
+  ↳ app/views/books/_index.html.erb:11
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/books/_index.html.erb:13
+  [1m[36mCACHE ActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "User"], ["name", "profile_image"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28:in `get_profile_image'
+  [1m[36mFavorite Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "favorites" WHERE "favorites"."book_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["book_id", 2], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/book.rb:18:in `favorited_by?'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."book_id" = ?[0m  [["book_id", 2]]
+  ↳ app/views/favorites/_btn.html.erb:9
+  Rendered favorites/_btn.html.erb (Duration: 4.7ms | Allocations: 1827)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "book_comments" WHERE "book_comments"."book_id" = ?[0m  [["book_id", 2]]
+  ↳ app/views/book_comments/_counter.html.erb:1
+  Rendered book_comments/_counter.html.erb (Duration: 3.1ms | Allocations: 1407)
+  Rendered books/_static_rate.html.erb (Duration: 1.3ms | Allocations: 855)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/books/_index.html.erb:13
+  [1m[36mCACHE ActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "User"], ["name", "profile_image"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:28:in `get_profile_image'
+  [1m[36mFavorite Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "favorites" WHERE "favorites"."book_id" = ? AND "favorites"."user_id" = ? LIMIT ?[0m  [["book_id", 1], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/book.rb:18:in `favorited_by?'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "favorites" WHERE "favorites"."book_id" = ?[0m  [["book_id", 1]]
+  ↳ app/views/favorites/_btn.html.erb:9
+  Rendered favorites/_btn.html.erb (Duration: 5.0ms | Allocations: 1824)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "book_comments" WHERE "book_comments"."book_id" = ?[0m  [["book_id", 1]]
+  ↳ app/views/book_comments/_counter.html.erb:1
+  Rendered book_comments/_counter.html.erb (Duration: 2.5ms | Allocations: 929)
+  Rendered books/_static_rate.html.erb (Duration: 0.8ms | Allocations: 744)
+  Rendered books/_index.html.erb (Duration: 32.2ms | Allocations: 13022)
+  Rendered books/index.html.erb within layouts/application (Duration: 45.7ms | Allocations: 19288)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 160)
+  Rendered searches/_form.html.erb (Duration: 1.0ms | Allocations: 1647)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 37)
+  Rendered layout layouts/application.html.erb (Duration: 50.8ms | Allocations: 23115)
+Completed 200 OK in 55ms (Views: 50.0ms | ActiveRecord: 1.4ms | Allocations: 24696)
+
+
